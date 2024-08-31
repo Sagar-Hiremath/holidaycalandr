@@ -45,12 +45,13 @@ jobs:
           path: target/surefire-reports/
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v1
+        uses: SonarSource/sonarcloud-github-action@v2
         with:
-          organization: sagar-hiremath
-          token: ${{ secrets.SONAR_TOKEN }}
+          projectKey: 'sagar-hiremath:holidaycalandr'  
+          organization: 'sagar-hiremath'
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Quality Gate Check
-        run: | 
-         curl -sSfL https://sonarcloud.io/api/qualitygates/project_status?projectKey=Sagar-Hiremath_holidaycalandr
-
+        run: |
+          curl -sSfL "https://sonarcloud.io/api/qualitygates/project_status?projectKey=sagar-hiremath:holidaycalandr"
