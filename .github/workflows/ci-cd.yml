@@ -54,4 +54,4 @@ jobs:
 
       - name: Quality Gate Check
         run: |
-          curl -sSfL "https://sonarcloud.io/api/qualitygates/project_status?projectKey=sagar-hiremath:holidaycalandr"
+          curl -sSfL "https://sonarcloud.io/api/qualitygates/project_status?projectKey=Sagar-hiremath:holidaycalandr"
