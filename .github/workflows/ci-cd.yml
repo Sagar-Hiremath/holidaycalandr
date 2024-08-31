@@ -47,11 +47,11 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
         with:
-          projectKey: 'sagar-hiremath:holidaycalandr'  
+          projectKey: 'Sagar-Hiremath_holidaycalandr'  
           organization: 'sagar-hiremath'
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Quality Gate Check
         run: |
-          curl -sSfL "https://sonarcloud.io/api/qualitygates/project_status?projectKey=Sagar-hiremath:holidaycalandr"
+          curl -sSfL "https://sonarcloud.io/api/qualitygates/project_status?projectKey=Sagar-Hiremath_holidaycalandr"
